@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="java.js"></script>
+    <title> Oblig 1 </title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Bestilling av kinobiletter</h1>
+
+Velg film:
+<select id="filmer">
+    <option></option>
+    <option>Joker</option>
+    <option>Parasite</option>
+    <option>Frozen 2</option>
+</select><span id="feilFilmer"></span>
+<br><br>
+<form method="post" action="">
+    Antall <input type="number" size="1" min="0" max="20" id="antall"><span id="feilAntall"></span><br>
+</form>
+<br>
+<table>
+    <tr>
+        <td>Fornavn</td>
+        <td><input type="text" id="fnavn"/><span id="feilFnavn"></span></td>
+    </tr>
+    <tr>
+        <td>Etternavn</td>
+        <td><input type="text" id="enavn"/><span id="feilEnavn"></span></td>
+    </tr>
+    <tr>
+        <td>Telefonnr</td>
+        <td><input type="text" id="tlf"/><span id="feilTlf"></span></td>
+    </tr>
+    <tr>
+        <td>Epost</td>
+        <td><input type="text" id="epost"/><span id="feilEpost"></span></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="kjopBilett()">Kjøp bilett</button>
+        </td>
+    </tr>
+</table>
+
+<h2>Alle biletter</h2>
+
+<div id="kinoBiletter"></div>
+<br>
+<button onclick="slettBilett()">Slett alle bilettene</button>
+
+</body>
+</html>
