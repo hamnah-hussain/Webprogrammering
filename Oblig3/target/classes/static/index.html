@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="js.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title> Oblig 3 </title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form id = form class="form">
+                <div class="form-group">
+                    <label>Velg film:</label>
+                    <select class="form-control" id="filmer">
+                        <option disabled selected value="0">Velg film her</option>
+                        <option value="Joker">Joker</option>
+                        <option value="Parasite">Parasite</option>
+                        <option value="Frozen 2">Frozen 2</option>
+                    </select><span id="feilFilmer"></span>
+                </div>
+                <div class ="form-group">
+                    <label>Antall</label>
+                    <input class="form-control" type="number" size="1" min="0" max="20" id="antall"><span id="feilAntall"></span>
+                </div>
+                <div class = "form-group">
+                    <label>Fornavn</label>
+                    <input class="form-control" type="text" id="fnavn"><span id="feilFnavn"></span>
+                </div>
+                <div class = "form-group">
+                    <label>Etternavn</label>
+                    <input class="form-control" type="text" id="enavn"><span id="feilEnavn"></span>
+                </div>
+                <div class = "form-group">
+                    <label>Telefonnr</label>
+                    <input class="form-control" type="text" id="tlf"><span id="feilTlf"></span>
+                </div>
+                <div class = "form-group">
+                    <label>Epost</label>
+                    <input class="form-control" type="text" id="epost"><span id="feilEpost"></span>
+                </div>
+            </form>
+            <button class="btn btn-primary" type="submit" onclick="kjopBilett()">Kjøp bilett</button>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle biletter</h2>
+            <div id="kinoBiletter"></div><br><br>
+            <button class="btn btn-danger" type="submit" onclick="slettBilett()">Slett alle bilettene</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
